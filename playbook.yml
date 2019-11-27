@@ -1,5 +1,7 @@
 ---
 - hosts: "{{ host | default('localhost') }}"
   become: yes
-  tasks:
-    - ping:
+
+  roles:
+    - { role: common }
+    - { role: fedora, when: "ansible_distribution = 'Fedora'" }
