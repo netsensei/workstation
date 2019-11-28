@@ -1,2 +1,21 @@
 ---
 # vars file for fedora
+yum_packages:
+  - ack
+  - curl
+  - direnv
+  - git
+  - git-extras
+  - gnome-tweak-tool
+  - htop
+  - jq
+  - nautilus-open-terminal
+  - the_silver_searcher
+  - tree
+  - xclip
+
+rpmfusion_packages:
+  - gstreamer1-libav
+  - gstreamer1-plugins-good
+  - gstreamer1-vaapi
+  - vlc

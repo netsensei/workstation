@@ -4,4 +4,4 @@
 
   roles:
     - { role: common }
-    - { role: fedora, when: "ansible_distribution = 'Fedora'" }
+    - { role: fedora, when: "ansible_distribution == 'Fedora'" }
