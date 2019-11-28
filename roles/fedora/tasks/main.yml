@@ -34,3 +34,5 @@
   dnf: name=* state=latest
   tags: update
   ignore_errors: yes
+
+- import_tasks: vscode.yml

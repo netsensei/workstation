@@ -1,0 +1,23 @@
+---
+# Installs Microsoft Visual Code
+
+- name: install dependencies (dnf)
+  dnf:
+    name:
+      - libX11-xcb
+      - which
+    state: present
+
+- name: install VS Code repo (dnf)
+  yum_repository:
+    name: code
+    description: Visual Studio Code repo
+    file: vscode
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    gpgcheck: yes
+
+- name: install VS Code
+  dnf:
+    name: code
+    state: present
