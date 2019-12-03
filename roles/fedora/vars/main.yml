@@ -13,6 +13,8 @@ yum_packages:
   - the_silver_searcher
   - tree
   - xclip
+  - neovim
+  - python3-neovim
 
 rpmfusion_packages:
   - gstreamer1-libav
