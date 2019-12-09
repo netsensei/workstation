@@ -1,0 +1,47 @@
+---
+# Installs VirtualBox and Vagrant
+
+- name: Install dependencies (dnf)
+  dnf:
+    name:
+      - wget
+      - gcc
+      - binutils
+      - make
+      - glibc-devel
+      - patch
+      - libgomp
+      - glibc-headers
+      - kernel-headers
+      - kernel-devel
+    state: present
+
+- name: Install VirtualBox repo (dnf)
+  yum_repository:
+    name: FedoraVirtualBox
+    enabled: yes
+    description: Fedora $releasever - $basearch - VirtualBox
+    baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/$releasever/$basearch
+    gpgkey: https://www.virtualbox.org/download/oracle_vbox.asc
+    gpgcheck: yes
+
+- name: Install VirtualBox
+  dnf:
+    name: VirtualBox-6.0
+    state: present
+
+- name: Add $USER to the vboxusers group
+  shell: usermod -a -G vboxusers ${USER}
+
+- name: Add $USER to the vboxusers group
+  shell: usermod -a -G vboxusers ${USER}
+
+- name: Configure VirtualBox Drivers
+  shell: /usr/lib/virtualbox/vboxdrv.sh setup
+
+
+- name: Install vagrant
+  dnf:
+    name:
+      - vagrant
+    state: present

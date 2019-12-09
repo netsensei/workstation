@@ -36,3 +36,4 @@
   ignore_errors: yes
 
 - import_tasks: vscode.yml
+- import_tasks: vagrant.yml
