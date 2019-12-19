@@ -1,9 +1,9 @@
 # Workstation
 
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+
 > So may books, so little time.
 -- Frank Zappa
-
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 This repository contains script to automate the setup of a fresh installation of my personal workstation.
 
