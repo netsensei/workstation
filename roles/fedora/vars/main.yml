@@ -15,6 +15,7 @@ yum_packages:
   - xclip
   - neovim
   - python3-neovim
+  - telegram-desktop  
 
 rpmfusion_packages:
   - gstreamer1-libav
